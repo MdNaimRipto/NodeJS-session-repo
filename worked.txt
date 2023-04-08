@@ -11,12 +11,12 @@ function App() {
       const { data } = await axios.post("/setCookie", {
         email: email
       }, {
-        // withCredentials: true
+        withCredentials: true
       })
       if (data.status === 201) {
         try {
           const { data } = await axios.get('/getCookie', {
-            // withCredentials: true
+            withCredentials: true
           })
           console.log({ "response recived ": data })
         } catch (error) {
